@@ -17,6 +17,7 @@ html {
 
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  
 }
 
 blockquote,
@@ -72,3 +73,28 @@ table {
   margin: 0 0 $base__space-unit;
   width: 100%;
 }
+
+// Main Content Area
+
+#content {
+  width: 1080px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  &:before {
+  font-family: FontAwesome;
+  content: "\f10d";
+  left: -175px;
+  color: #0c0;
+  font-size: 125px;
+  }
+  &:after {
+    font-family: FontAwesome;
+    content: "\f10e";
+    right: -175px;
+    color: #0c0;
+    font-size: 125px;
+  }
+}
+

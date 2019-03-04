@@ -130,7 +130,9 @@ a {
 		width: 50%;
 	}
 }
-.menu {
+.menu, ul {
 	display:flex;
-	
+	justify-content: flex-end;
 }
+
+

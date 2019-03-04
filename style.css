@@ -341,6 +341,32 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+#content {
+  width: 1080px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
+  #content:before {
+    font-family: FontAwesome;
+    content: "\f10d";
+    left: -175px;
+    color: #0c0;
+    font-size: 125px; }
+  #content:after {
+    font-family: FontAwesome;
+    content: "\f10e";
+    right: -175px;
+    color: #0c0;
+    font-size: 125px; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -491,10 +517,13 @@ a {
   text-align: right;
   width: 50%; }
 
-.menu {
+.menu, ul {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -602,11 +631,10 @@ object {
 /* All Archives Page */
 /* Submit a Quote Page */
 #page {
-  background: #222;
-  font-family: "Exo "; }
+  background: #222; }
 
 .main-logo {
-  width: 500px;
+  width: 700px;
   height: 200px; }
 
 .site-branding {

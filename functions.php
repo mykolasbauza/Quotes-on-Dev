@@ -83,8 +83,15 @@ require get_template_directory() . '/inc/metaboxes.php';
  */
 require get_template_directory() . '/inc/api.php';
 
-function register_my_menu() {
-	register_nav_menu('footer-menu',__( 'Footer menu' ));
-  }
-  
-  add_action( 'init', 'register_my_menu' );
+  add_action( 'wp_enqueue_scripts', 'prefix_enqueue_awesome' );
+/**
+* Register and load font awesome CSS files using a CDN.
+*
+* @link http://www.bootstrapcdn.com/#fontawesome
+* @author FAT Media
+*/
+add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
+
+function tthq_add_custom_fa_css() {
+wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+}
