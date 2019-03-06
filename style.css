@@ -229,8 +229,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: "Exo Web", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -275,6 +275,9 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.entry-title {
+  font-size: 20px; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -517,13 +520,16 @@ a {
   text-align: right;
   width: 50%; }
 
-.menu, ul {
+.menu, ul, li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
+          justify-content: flex-end;
+  list-style-type: none;
+  padding: 5px;
+  padding-right: 50px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -608,6 +614,11 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -617,7 +628,11 @@ a {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0; }
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%; }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,

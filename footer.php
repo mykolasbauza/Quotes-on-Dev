@@ -34,7 +34,7 @@
                 ?>
             </div><!-- .wrap -->
         </footer><!-- #colophon -->
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> <p>Brought to you by <a CLASS=“red-academy” href=“http://www.redacademy.com/“>RED Academy</a></p>
     </div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>

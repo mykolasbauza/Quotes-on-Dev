@@ -94,4 +94,32 @@ add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
 function tthq_add_custom_fa_css() {
 wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+
 }
+
+function red_scripts() {
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'red_api', get_template_directory_uri() . '/build/js/api.min.js', array(), false, true );
+    wp_localize_script( 'red_api', 'red_vars', array(
+	   'rest_url' => esc_url_raw( rest_url() ),
+	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+	   'post_id' => get_the_ID(),
+	   'home_url' => esc_url_raw( home_url() ),
+	   'success' => 'Thanks, your quote submission was received!',
+	   'failure' => 'Your submission could not be processed.',
+   ) );
+ }
+ add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+ /**
+ * Filter the Post archive.
+ */
+function qod_modify_archives( $query ) {
+	if ( ( is_home() || is_single() )  && $query->is_main_query() ) {
+		$query->set( 'posts_per_page', 1 );
+	} if ( ( is_archive() ) && $query->is_main_query() ) {
+		$query->set( 'posts_per_page', 5 );
+	}
+ }
+ add_action( 'pre_get_posts', 'qod_modify_archives' );
+ 

@@ -22,6 +22,7 @@
 }
 
 .page-content,
+
 .entry-content,
 .entry-summary {
 	margin: $base__space-unit 0 0;
@@ -30,6 +31,9 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $base__space-unit;
+}
+.site-content {
+	display:flex;
 }
 
 

@@ -15,6 +15,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<?php the_post_navigation(); ?>
+			<div><button id="get_quote">Show me another!</button></div>
 
 		<?php endwhile; // End of the loop. ?>
 

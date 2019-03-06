@@ -13,7 +13,9 @@
 		<link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		
 	<?php wp_head(); ?>
 	</head>
 
@@ -33,13 +35,15 @@
                     </a>
                     </div>
 				</div><!-- .site-branding -->
+				
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+					
 					
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 			<!-- <section class="left"><i class="fas fa-quote-left"></i></section>
             <section class="right"><i class="fas fa-quote-right"></i></section> -->
-
+			
 			<div id="content" class="site-content">
+				
