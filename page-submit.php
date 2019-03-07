@@ -35,6 +35,7 @@ get_header(); ?>
                             <br>
                             <input id="submit_quote"type="submit" value="Submit Quote">
                         </form>
+                        <p class="submit-success" style="display-none"></p>
     
             <?php endif ?>
 			</section>

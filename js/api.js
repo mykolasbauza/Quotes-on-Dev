@@ -67,7 +67,7 @@
             .find('input[type="text"], input[type="url"], textarea')
             .val('');
             // show success message
-            $('#quote-submission-form')
+            $('.submit-success')
             .text(red_vars.success)
             .slideDown('slow');
         })
