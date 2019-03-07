@@ -35,44 +35,44 @@
         }
         });
     });
-}) (jQuery)
-/**
-* Ajax-based front-end post submissions. ***tue 5:30pm***
+}) (jQuery);
+/*
+* Ajax-based front-end post submissions.
 */
-//    ($(function() {
-//      $('#quote-submission-form').on('submit', function(event) {
-//        event.preventDefault();
- 
-//        const data = {
-//          title: $('#quote-author').val(),
-//          content: $('#quote-content').val(),
-//          _qod_quote_source: $('#quote-source').val(),
-//          _qod_quote_source_url: $('#quote-source-url').val(),
-//          post_status: 'pending'
-//        };
- 
-//        $.ajax({
-//          method: 'post',
-//          url: red_vars.rest_url + 'wp/v2/posts',
-//          data,
-//          beforeSend: function(xhr) {
-//            xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
-//          }
-//        })
-//          .done(function() {
-//            // clear the form fields and hide the form
-//            $('#quote-submission-form')
-//            .slideup()
-//            .find('input[type="text"], input[type="url"], textarea')
-//            .val('');
-//            // show success message
-//            $('.submit-success-message')
-//            .text(red_vars.success)
-//            .slideDown('slow');
-//          })
-//          .fail(function() {
-//            alert(red_vars.failure);
-//          });
-//      });
-//    });
-// })( jQuery );
+(function($) {
+    $('#submit_quote').on('submit', function(event) {
+        event.preventDefault();
+
+        const data = {
+            title: $('#quote-author').val(),
+            content: $('#quote-content').val(),
+            _qod_quote_source: $('#quote-source').val(),
+            _qod_quote_source_url: $('#quote-source-url').val(),
+            post_status: 'pending'
+        };
+        
+        $.ajax({
+            method: 'post',
+            url: red_vars.rest_url + 'wp/v2/posts',
+            data,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
+              
+            }
+        })
+        .done(function() {
+        // clear the form fields and hide the form
+        $('#quote-submission-form')
+            .slideup()
+            .find('input[type="text"], input[type="url"], textarea')
+            .val('');
+            // show success message
+            $('#quote-submission-form')
+            .text(red_vars.success)
+            .slideDown('slow');
+        })
+        .fail(function() {
+            alert(red_vars.failure);
+        });
+    });
+}) (jQuery)

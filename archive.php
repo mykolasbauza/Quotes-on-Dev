@@ -4,7 +4,6 @@
  *
  * @package QOD_Starter_Theme
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -22,12 +21,12 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content-archive' );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php qod_numbered_pagination(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

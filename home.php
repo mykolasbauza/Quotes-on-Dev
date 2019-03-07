@@ -19,7 +19,7 @@ get_header(); ?>
                          </a>
                      </div>
             
-                <button type="button" id="get_quote">Show Me Another!</button>
+                <!-- <button type="button" id="get_quote">Show Me Another!</button> -->
                                                 
                  </div><!-- .site-branding -->
                 </header>
