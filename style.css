@@ -277,7 +277,7 @@ big {
   font-size: 125%; }
 
 .entry-title {
-  font-size: 30px; }
+  font-size: 18px; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -461,7 +461,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
     color: #0c0; }
   a:hover, a:focus, a:active {
@@ -544,12 +545,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style-type: none;
-  padding: 5px;
-  padding-right: 50px; }
+  padding: 5px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -686,15 +686,6 @@ object {
 h1 {
   color: #fff  !important; }
 
-#quote-submission-form {
-  background-color: #222;
-  border: 2px solid #0c0;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  padding: .25rem 6.5rem; }
-
 input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
   background-color: #222;
   border: 2px solid #0c0;
@@ -724,3 +715,35 @@ input[type=email], input[type=password], input[type=search], input[type=text], i
 
 .search-field {
   width: 250px; }
+
+.entry-content p {
+  font-size: 32px;
+  font-family: "Exo Web" !important; }
+
+.entry-content h2 {
+  font-size: 14px;
+  font-family: "Exo Web" !important; }
+
+.home.blog.logged-in.admin-bar.customize-support {
+  background: #222; }
+
+.wrap {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 4.5rem 0 3rem; }
+
+#menu-item-286, #menu-item-287, #menu-item-288 {
+  border-right: 1px solid #fff;
+  justify-items: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  margin: 5px;
+  padding-right: 15px; }

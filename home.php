@@ -14,8 +14,7 @@ get_header(); ?>
                  <div class="site-branding">
                      <div class="logo">
                          <h1 class="site-title screen-reader-text"><a href="https://quotes.academy.red/" rel="home">Quotes on Dev</a></h1>
-                         <a href="https://quotes.academy.red/" rel="home">
-                                                 
+                         <a href="https://quotes.academy.red/" rel="home">                                              
                          </a>
                      </div>
             
@@ -28,7 +27,6 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'template-parts/content' ); ?>
             <?php endwhile; ?>
-            <?php the_posts_navigation(); ?>
         <?php else : ?>
             <?php get_template_part( 'template-parts/content', 'none' ); ?>
         <?php endif; ?>

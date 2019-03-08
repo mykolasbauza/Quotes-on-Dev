@@ -1,0 +1,23 @@
+.wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 4.5rem 0 3rem;
+   
+   
+
+}       
+#menu-item-286, #menu-item-287, #menu-item-288 {
+    border-right: 1px solid #fff;
+    justify-items: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    text-decoration: none;
+    margin: 5px;
+    padding-right: 15px;
+    
+}
+

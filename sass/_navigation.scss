@@ -6,6 +6,7 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
 		color: #0c0;
@@ -132,11 +133,11 @@ a {
 }
 .menu, ul, li {
 	display:flex;
-	justify-content: flex-end;
+	justify-content: center;
 	list-style-type: none;
 	padding: 5px;
-	padding-right: 50px;
-	// border-right: 1px solid #fff;
+	
+	
 }
 
 

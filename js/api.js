@@ -6,7 +6,7 @@
         $.ajax({
         method: 'get',
         url:
-        red_vars.rest_url +
+        red_vars.root_url +
             'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
         cache: false
         }).done(function(data) {
@@ -40,7 +40,7 @@
 * Ajax-based front-end post submissions.
 */
 (function($) {
-    $('#submit_quote').on('submit', function(event) {
+    $('#quote-submission-form').on('submit', function(event) {
         event.preventDefault();
 
         const data = {
@@ -53,23 +53,23 @@
         
         $.ajax({
             method: 'post',
-            url: red_vars.rest_url + 'wp/v2/posts',
+            url: red_vars.root_url + 'wp/v2/posts',
             data,
             beforeSend: function(xhr) {
-                xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
+                xhr.setRequestHeader('X-WP-Nonce', red_vars.nonce);
               
             }
         })
         .done(function() {
         // clear the form fields and hide the form
         $('#quote-submission-form')
-            .slideup()
+            .slideUp()
             .find('input[type="text"], input[type="url"], textarea')
             .val('');
             // show success message
             $('.submit-success')
             .text(red_vars.success)
-            .slideDown('slow');
+            .show();
         })
         .fail(function() {
             alert(red_vars.failure);

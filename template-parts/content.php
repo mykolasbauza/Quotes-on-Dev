@@ -16,6 +16,6 @@
 	<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
-<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<?php the_title( sprintf( '<h2 class="entry-title">', esc_url( get_permalink() ) ), '</h2>' ); ?>
 <button type="button" id="get_quote">Show Me Another!</button>
 <?php ?>
